@@ -67,12 +67,26 @@ The following tests were completed successfully:
 - API Gateway POST request returned HTTP 200 with an execution ARN.
 - Uploading a new PNG image automatically triggered Lambda and generated a thumbnail.
 
-## 7. Source Code
+## 7. Amazon CloudWatch Monitoring
+
+Amazon CloudWatch is used to monitor AWS Lambda execution logs and troubleshoot image processing errors.
+
+The CloudWatch log group `/aws/lambda/ResizeImageFunction` was verified successfully.
+
+The logs confirmed:
+- Successful Lambda invocation.
+- START, END, and REPORT execution events.
+- Execution duration of approximately 811 milliseconds.
+- No errors visible in the inspected execution logs.
+
+This confirms that AWS Lambda execution activity is being recorded and monitored through Amazon CloudWatch.
+
+## 8. Source Code
 
 - `lambda_function.py` — Python image resizing function.
 - `step-functions.json` — AWS Step Functions workflow definition.
 - `README.md` — Project documentation.
 
-## 8. Conclusion
+## 9. Conclusion
 
 The AWS Serverless Image Processing Pipeline demonstrates event-driven processing, serverless computing, workflow orchestration, API integration, and cloud storage. Testing confirmed that the application can process images through both S3 event notifications and an API-initiated Step Functions workflow.
