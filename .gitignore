@@ -1,0 +1,10 @@
+# Exclude locally installed Pillow dependencies
+pillow-layer/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Local environment files
+.env
+.venv/
